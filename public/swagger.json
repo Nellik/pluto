@@ -1,0 +1,43 @@
+{
+   "swagger": "2.0",
+   "info": {
+      "version": "1.0.0",
+      "title": "Posts API"
+   },
+   "host": "localhost:8000",
+   "basepath": "/",
+   "schemes": [
+      "http"
+   ],
+   "consumes": [
+      "application/json"
+   ],
+   "produces": [
+      "application/json"
+   ],
+   "paths": {
+      "/posts": {
+         "get": {
+            "description": "Get available posts",
+            "summary": "list of posts",
+            "operationId": "GetOperations",
+            "parameters": [
+               {
+                  "name": "body",
+                  "in": "query",
+                  "description": "Post body",
+                  "type": "string"
+               }
+            ],
+            "responses": {
+               "200": {
+                  "description": "Success",
+                  "schema": {
+                     "type": "object"
+                  }
+               }
+            }
+         }
+      }
+   }
+}
